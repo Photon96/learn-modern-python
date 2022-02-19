@@ -13,11 +13,14 @@ def main():
     """The modern Python project"""
 
     with requests.get(API_URL) as response:
-        response.raise_for_status()
+        status_code = response.status_code
+        if (status_code != requests.codes.ok):
+            click.secho(f"Bad request {status_code}", fg="red")
+            return
         data = response.json()
     
     title = data['title']
     extract = data['extract']
 
-    click.secho(title, fg="red")
+    click.secho(title, fg="green")
     click.echo(textwrap.fill(extract))
