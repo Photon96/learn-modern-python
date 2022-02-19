@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "learn-modern-python"
+version = "0.1.0"
+description = "The modern Python project"
+readme = "README.md"
+license = "MIT"
+authors = ["Photon96"]
+homepage = "https://github.com/Photon96/learn-modern-python"
+repository = "https://github.com/Photon96/learn-modern-python"
+keywords = ["python"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
